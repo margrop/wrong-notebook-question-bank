@@ -79,7 +79,7 @@
 | `taxonomy-primary-chinese` | 小学 | 语文 | 1976 | 有 |
 | `taxonomy-primary-science` | 小学 | 科学 | 1040 | 有 |
 | `taxonomy-primary-politics` | 小学 | 道法/政治 | 636 | 有 |
-| `taxonomy-junior_high-*` | 初中 | 数学、英语、语文、物理、化学、生物、历史、地理、政治 | 5319 | 有 |
+| `taxonomy-junior_high-*` | 初中 | 数学、英语、语文、物理、化学、生物、历史、地理、政治 | 5115 | 有 |
 | `taxonomy-senior_high-*` | 高中 | 数学、英语、物理 | 2828 | 有 |
 | `gaokao-senior-high-*` | 高中 | 数学、语文、英语、物理、化学、生物、历史、地理、政治 | 3126 | 无 |
 

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/margrop/wrong-notebook-question-bank/schema/question-bank.schema.json",
+  "title": "wrong-notebook-question-bank",
+  "type": "object",
+  "required": ["format", "version", "meta", "questions"],
+  "properties": {
+    "format": { "const": "wrong-notebook-question-bank" },
+    "version": { "const": 1 },
+    "meta": { "$ref": "#/$defs/meta" },
+    "questions": { "type": "array", "maxItems": 5000, "items": { "$ref": "#/$defs/question" } }
+  },
+  "$defs": {
+    "stage": { "enum": ["primary", "junior_high", "senior_high", "university"] },
+    "subject": { "enum": ["math", "english", "chinese", "science", "physics", "chemistry", "biology", "history", "geography", "politics"] },
+    "questionType": { "enum": ["single_choice", "multiple_choice", "true_false", "fill_blank", "calculation", "solution", "reading", "cloze", "writing", "other"] },
+    "meta": {
+      "type": "object",
+      "required": ["id", "title", "stage", "subject", "grades", "count", "tagged", "source", "license"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "title": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "stage": { "$ref": "#/$defs/stage" },
+        "subject": { "$ref": "#/$defs/subject" },
+        "grades": { "type": "array", "items": { "type": "integer", "minimum": 1, "maximum": 12 } },
+        "count": { "type": "integer", "minimum": 1 },
+        "tagged": { "type": "boolean" },
+        "source": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "license": { "type": "string", "minLength": 1 },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "question": {
+      "type": "object",
+      "required": ["text", "questionType"],
+      "properties": {
+        "id": { "type": "string" },
+        "stage": { "$ref": "#/$defs/stage" },
+        "subjectKey": { "$ref": "#/$defs/subject" },
+        "grade": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "semester": { "enum": ["上", "下", null] },
+        "questionType": { "$ref": "#/$defs/questionType" },
+        "difficultyStars": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
+        "text": { "type": "string", "minLength": 1, "maxLength": 20000 },
+        "options": { "type": ["object", "null"], "additionalProperties": { "type": "string", "maxLength": 5000 } },
+        "answer": { "type": ["string", "null"], "maxLength": 20000 },
+        "analysis": { "type": ["string", "null"], "maxLength": 50000 },
+        "knowledgePoints": { "type": "array", "maxItems": 100, "items": { "type": "string", "maxLength": 200 } },
+        "source": { "type": ["string", "null"], "maxLength": 200 },
+        "figureSvg": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

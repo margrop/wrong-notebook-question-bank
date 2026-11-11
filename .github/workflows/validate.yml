@@ -41,6 +41,21 @@ jobs:
           fi
           python3 scripts/qbank.py validate "${files[@]}"
 
+  purge-cdn:
+    # 应用经 jsDelivr 读取 main 分支的 index.json。CDN 会缓存旧索引，
+    # 包被移动或下架后旧索引指向的文件已不存在，下载会失败，所以合并后立即刷新。
+    name: 刷新 CDN 上的索引
+    if: github.event_name == 'push'
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: 刷新 jsDelivr 缓存
+        run: |
+          for attempt in 1 2 3; do
+            curl --fail --silent --show-error "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/index.json"
+            sleep 60
+          done
+
   validate-with-main-rules:
     # 用主分支的校验脚本检查 PR 的数据，防止通过修改校验脚本放行问题数据。
     # PR 确实需要调整规则时本任务可能失败，由维护者判断。

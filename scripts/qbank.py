@@ -49,6 +49,7 @@ MAX_QUESTIONS = 5000              # 应用单包上限
 MAX_FILE_BYTES = 5 * 1024 * 1024  # 单包文件上限，保证 CDN 与移动端下载
 MAX_PACKAGES = 500                # 应用索引上限
 MAX_FIGURE_BYTES = 200 * 1024
+MAX_DUPLICATE_RATIO = 0.2         # 重复题占比上限；超过说明题目是批量套用的
 
 META_KEYS = ["id", "title", "description", "stage", "subject", "grades", "count", "tagged", "source", "sourceUrl", "license", "updatedAt"]
 META_REQUIRED = ["id", "title", "stage", "subject", "grades", "count", "tagged", "source", "license", "updatedAt"]
@@ -189,7 +190,10 @@ def answer_letters(answer):
 
 
 def content_key(question):
-    parts = [question.get("material") or "", question.get("text") or "", dumps(question.get("options") or {})]
+    """题目内容指纹：忽略空白和选项顺序，轮换选项的同一道题视为重复。"""
+    options = question.get("options")
+    values = sorted(str(value) for value in options.values()) if isinstance(options, dict) else []
+    parts = [str(question.get("material") or ""), str(question.get("text") or "")] + values
     return re.sub(r"\s+", "", "\x1f".join(parts))
 
 
@@ -345,7 +349,8 @@ def validate_question(report, file, question, index, meta, state):
         key = content_key(question)
         first = state["contents"].setdefault(key, where)
         if first != where:
-            report.warn("duplicate-question", file, f"与 {first} 内容相同", where)
+            report.warn("duplicate-question", file, f"与 {first} 内容相同（忽略选项顺序）", where)
+            state["duplicates"] += 1
 
 
 # ---------- 包与来源集校验 ----------
@@ -418,10 +423,16 @@ def validate_bank(report, path, file, collection=None):
     if meta.get("count") != len(questions):
         report.error("question-count", file, f"meta.count={meta.get('count')!r} 与实际题数 {len(questions)} 不一致")
 
-    state = {"ids": set(), "contents": {}, "grades": set(), "tagged": 0}
+    state = {"ids": set(), "contents": {}, "grades": set(), "tagged": 0, "duplicates": 0}
     for index, question in enumerate(questions):
         validate_question(report, file, question, index, meta, state)
 
+    if len(questions) >= 20 and state["duplicates"] > len(questions) * MAX_DUPLICATE_RATIO:
+        report.error(
+            "duplicate-ratio", file,
+            f"{len(questions)} 道题中有 {state['duplicates']} 道与包内其他题重复，超过 {MAX_DUPLICATE_RATIO:.0%}；"
+            "同一批题被套用到多个知识点时会这样，请去重并核对知识点",
+        )
     if meta.get("tagged") is True and state["tagged"] == 0:
         report.error("meta", file, "meta.tagged 为 true，但没有题目带知识点")
     if meta.get("tagged") is False and questions and state["tagged"] == len(questions):

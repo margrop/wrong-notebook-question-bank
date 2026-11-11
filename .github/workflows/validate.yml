@@ -42,17 +42,32 @@ jobs:
           python3 scripts/qbank.py validate "${files[@]}"
 
   purge-cdn:
-    # 应用经 jsDelivr 读取 main 分支的 index.json。CDN 会缓存旧索引，
-    # 包被移动或下架后旧索引指向的文件已不存在，下载会失败，所以合并后立即刷新。
-    name: 刷新 CDN 上的索引
+    # 应用经 jsDelivr 读取 main 分支的 index.json 和题库包。CDN 按路径缓存：
+    # 包被移动或下架后，旧索引指向的文件已不存在，下载会失败；包内容更新后，同一路径仍返回旧文件。
+    # 所以合并后刷新索引和本次改动的题库包。
+    name: 刷新 CDN 缓存
     if: github.event_name == 'push'
     needs: validate
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: 刷新 jsDelivr 缓存
+        env:
+          BEFORE: ${{ github.event.before }}
         run: |
-          for attempt in 1 2 3; do
-            curl --fail --silent --show-error "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/index.json"
+          files=(index.json)
+          if git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            mapfile -t changed < <(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'banks/*/*.json' ':!banks/*/collection.json')
+            files+=("${changed[@]}")
+          fi
+          # jsDelivr 的刷新偶尔不生效，隔一分钟重复一次
+          for attempt in 1 2; do
+            for file in "${files[@]}"; do
+              echo "刷新 $file"
+              curl --fail --silent --show-error --output /dev/null "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/${file}"
+            done
             sleep 60
           done
 

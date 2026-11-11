@@ -60,7 +60,7 @@ python3 -m unittest discover -s tests        # 测试
 - 新增或收紧校验规则前，先对现有数据运行。现有数据触发的错误在同一次改动中修好，并把对上游数据的修正记入该来源集 `collection.json` 的 `notes`。
 - 题库格式由应用端 `src/lib/question-bank/format.ts`（wrong-notebook 仓库）决定，那里的字段名、长度上限、题数上限是事实来源。应用端解析时会丢弃未知字段，所以本仓库的校验拒绝未知字段，避免拼写错误被静默吞掉。
 - 应用的默认索引地址是 `https://cdn.jsdelivr.net/gh/margrop/wrong-notebook-question-bank@main/index.json`，包地址为索引所在目录加 `file`。不要移动 `index.json`，不要改变 `file` 相对仓库根的语义。
-- jsDelivr 会缓存 `index.json`。移动、改名或下架题库包后，旧索引指向的文件已不存在，应用下载会失败。CI 在合并到 `main` 后会自动刷新缓存（`purge-cdn` 任务）；合并后仍应确认 CDN 上的索引已更新，必要时手动访问 `https://purge.jsdelivr.net/gh/margrop/wrong-notebook-question-bank@main/index.json`。
+- jsDelivr 按路径缓存文件。移动、改名或下架题库包后，旧索引指向的文件已不存在，应用下载会失败；修改包内容后，同一路径仍会返回旧文件。CI 在合并到 `main` 后会刷新 `index.json` 和本次改动的题库包（`purge-cdn` 任务）；合并后仍应确认 CDN 上的索引与各包的 `sha256` 一致，必要时手动访问 `https://purge.jsdelivr.net/gh/margrop/wrong-notebook-question-bank@main/<路径>`。
 
 ## 语言
 

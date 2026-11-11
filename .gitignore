@@ -1,0 +1,8 @@
+# 转换时的原始资料与中间文件
+.work/
+
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+.claude/settings.local.json

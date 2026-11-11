@@ -1,26 +1,18 @@
 # 数据来源与许可
 
-本仓库只做结构化打包，题目、答案、解析与知识点名称来自下列公开项目。打包不改变题目内容。
+本仓库对题库数据只做结构化打包。题目、答案、解析与知识点名称来自各来源，版权归原作者或原出题机构。
 
-## cn-math-taxonomy
+每个来源集的出处、许可、获取日期和转换说明记录在 `banks/<来源集>/collection.json`，汇总表见 [`docs/CATALOG.md`](./docs/CATALOG.md)。再分发题库数据时，请保留对应的 `collection.json` 和来源链接，并遵守该来源的许可。
 
-- 仓库：https://github.com/xiaoyang111222/cn-math-taxonomy
-- 许可：CC BY-NC 4.0（https://creativecommons.org/licenses/by-nc/4.0/）
-- 使用范围：`taxonomy-*` 全部题库包
-- 获取日期：2026-11-11（`data/topics.json`、`data/questions.json`）
-- 转换：按题目 `topicId` 关联知识点 `name`、`grade`、`semester`、`chapter`；`morality` 学科记为 `politics`；高中 13–16 册次统一记为 `grade: 12`。
-- 上游说明：知识图谱与题库仍需一线教师审核；商业使用需单独授权。
+## 需要特别注意的来源
 
-## rainewhk/gaokao
+- **`taxonomy`**（[xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy)，CC-BY-NC-4.0）：仅限非商业使用，商业使用需向原作者单独授权。上游说明其知识图谱与题库仍需一线教师审核。
+- **`gaokao`**（[rainewhk/gaokao](https://github.com/rainewhk/gaokao)，Apache-2.0，整合 [GAOKAO-Bench](https://github.com/OpenLMLab/GAOKAO-Bench) 与 GAOKAO-Bench-Updates）：数据集以 Apache-2.0 发布，题目版权归原出题机构；上游说明不保证答案与解析完全准确，仅供研究学习。
 
-- 仓库：https://github.com/rainewhk/gaokao
-- 许可：Apache-2.0
-- 上游来源：GAOKAO-Bench（https://github.com/OpenLMLab/GAOKAO-Bench）、GAOKAO-Bench-Updates
-- 使用范围：`gaokao-senior-high-*` 全部题库包
-- 获取日期：2026-11-11
-- 转换：按目录学科、年份、卷别与题型拆分；答案数组转为逗号分隔文本；保留题干 LaTeX 与解析。
-- 上游说明：题目版权归原出题机构；不保证答案与解析完全准确；仅供研究学习。
+## 本仓库自身
 
-## 本仓库结构
+索引格式、JSON Schema、工具脚本与文档以 MIT 许可发布，见 [`LICENSE`](./LICENSE)。
 
-索引格式、JSON Schema 与校验脚本为 MIT 许可。题库数据沿用上述来源许可；再分发时请保留本文件与来源链接。
+## 下架
+
+权利人认为某些内容不应出现在本仓库的，请开「版权与下架」Issue，维护者核实后移除。

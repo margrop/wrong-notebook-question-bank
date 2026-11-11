@@ -1,0 +1,18 @@
+name: 版权与下架
+description: 认为某些内容不应出现在本仓库
+labels: ["版权"]
+body:
+  - type: input
+    id: scope
+    attributes:
+      label: 涉及的内容
+      description: 来源集、题库包或题目 id
+    validations:
+      required: true
+  - type: textarea
+    id: basis
+    attributes:
+      label: 权利依据与诉求
+      description: 你与这些内容的关系，以及希望如何处理。请不要在这里填写不便公开的个人信息
+    validations:
+      required: true

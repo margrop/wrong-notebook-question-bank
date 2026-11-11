@@ -1,0 +1,67 @@
+name: 校验
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: 校验题库与工具
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 安装 jsonschema（仅测试使用）
+        run: pip install --quiet jsonschema
+      - name: 工具测试与 JSON Schema 校验
+        run: python3 -m unittest discover -s tests -v
+      - name: 校验整个仓库
+        run: python3 scripts/qbank.py validate --quiet
+      - name: 列出本次改动的题库包的警告
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          mapfile -t files < <(git diff --name-only --diff-filter=AM "$BASE_SHA"...HEAD -- 'banks/*/*.json' ':!banks/*/collection.json')
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "本次没有改动题库包"
+            exit 0
+          fi
+          python3 scripts/qbank.py validate "${files[@]}"
+
+  validate-with-main-rules:
+    # 用主分支的校验脚本检查 PR 的数据，防止通过修改校验脚本放行问题数据。
+    # PR 确实需要调整规则时本任务可能失败，由维护者判断。
+    name: 用主分支规则校验
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: pr
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 校验
+        run: |
+          if [ ! -f base/scripts/qbank.py ]; then
+            echo "主分支还没有 scripts/qbank.py，跳过"
+            exit 0
+          fi
+          python3 base/scripts/qbank.py --root pr validate --quiet

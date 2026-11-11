@@ -4,204 +4,10 @@
   "updatedAt": "2026-11-11",
   "packages": [
     {
-      "id": "taxonomy-junior_high-biology",
-      "title": "生物题库（初中）",
-      "stage": "junior_high",
-      "subject": "biology",
-      "grades": [
-        7,
-        8
-      ],
-      "count": 264,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-junior_high-biology.json",
-      "sizeBytes": 280559,
-      "sha256": "b4dd20103d72297826dc8d3442447ab499dd85486f12422c83e46d04a5214ae1"
-    },
-    {
-      "id": "taxonomy-junior_high-chemistry",
-      "title": "化学题库（初中）",
-      "stage": "junior_high",
-      "subject": "chemistry",
-      "grades": [
-        9
-      ],
-      "count": 180,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-junior_high-chemistry.json",
-      "sizeBytes": 249836,
-      "sha256": "3beb137ba90cda4a27a032820c7eba33d6ea5144eadcc7b86a9271498451e6d8"
-    },
-    {
-      "id": "taxonomy-junior_high-chinese",
-      "title": "语文题库（初中）",
-      "stage": "junior_high",
-      "subject": "chinese",
-      "grades": [
-        7,
-        8,
-        9
-      ],
-      "count": 756,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-junior_high-chinese.json",
-      "sizeBytes": 462262,
-      "sha256": "0f62e54660e7fdc87ad2c7730061e068c5d609700d1c6d817e609c6ef2e90045"
-    },
-    {
-      "id": "taxonomy-junior_high-english",
-      "title": "英语题库（初中）",
-      "stage": "junior_high",
-      "subject": "english",
-      "grades": [
-        7,
-        8,
-        9
-      ],
-      "count": 1028,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-junior_high-english.json",
-      "sizeBytes": 506203,
-      "sha256": "2f6a5256a51030df00b4891a7e4f17c867eb1108cdd276ebffea9543dcef8515"
-    },
-    {
-      "id": "taxonomy-junior_high-geography",
-      "title": "地理题库（初中）",
-      "stage": "junior_high",
-      "subject": "geography",
-      "grades": [
-        7,
-        8
-      ],
-      "count": 236,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-junior_high-geography.json",
-      "sizeBytes": 255371,
-      "sha256": "d5b1bcdf1ff30005540515b2aeea233c4849bdea590e5408c875644098819eaf"
-    },
-    {
-      "id": "taxonomy-junior_high-history",
-      "title": "历史题库（初中）",
-      "stage": "junior_high",
-      "subject": "history",
-      "grades": [
-        7,
-        8,
-        9
-      ],
-      "count": 536,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-junior_high-history.json",
-      "sizeBytes": 396608,
-      "sha256": "8ee506150fdb28c45c4d1ccafbd3a787ed348332926d56292c08e351a6555a23"
-    },
-    {
-      "id": "taxonomy-junior_high-math",
-      "title": "数学题库（初中）",
-      "stage": "junior_high",
-      "subject": "math",
-      "grades": [
-        7,
-        8,
-        9
-      ],
-      "count": 1407,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-junior_high-math.json",
-      "sizeBytes": 820343,
-      "sha256": "76e17b6369e08e66337e0994e7cf376a2a2b41a79b0b9f4bf0a4db7b2216e168"
-    },
-    {
-      "id": "taxonomy-junior_high-physics",
-      "title": "物理题库（初中）",
-      "stage": "junior_high",
-      "subject": "physics",
-      "grades": [
-        8,
-        9
-      ],
-      "count": 368,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-junior_high-physics.json",
-      "sizeBytes": 378238,
-      "sha256": "f5e81b1efafde9402f8c9d9397de72e855824e75f9c254cc022b8ae919546d03"
-    },
-    {
-      "id": "taxonomy-junior_high-politics",
-      "title": "政治题库（初中）",
-      "stage": "junior_high",
-      "subject": "politics",
-      "grades": [
-        7,
-        8
-      ],
-      "count": 340,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-junior_high-politics.json",
-      "sizeBytes": 359292,
-      "sha256": "8d44ecc4ab525dee4c3c1376f6530bd70901ef914253df202d397bbf3bf46c8d"
-    },
-    {
-      "id": "taxonomy-primary-chinese",
-      "title": "语文题库（小学）",
-      "stage": "primary",
-      "subject": "chinese",
-      "grades": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "count": 1976,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-primary-chinese.json",
-      "sizeBytes": 1112234,
-      "sha256": "6171fdc04531194994e9dace9ccbb5b6b5852eefab8d240e008c1216900fb29a"
-    },
-    {
-      "id": "taxonomy-primary-english",
-      "title": "英语题库（小学）",
-      "stage": "primary",
-      "subject": "english",
-      "grades": [
-        3,
-        4,
-        5,
-        6
-      ],
-      "count": 1100,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-primary-english.json",
-      "sizeBytes": 494845,
-      "sha256": "4892f600d5a1c57304bd837e07c71d4600b64e862a599e54ee6d7c45d31eb329"
-    },
-    {
       "id": "taxonomy-primary-math",
       "title": "数学题库（小学）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
       "stage": "primary",
       "subject": "math",
       "grades": [
@@ -215,16 +21,43 @@
       "count": 1136,
       "tagged": true,
       "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-primary-math.json",
-      "sizeBytes": 489969,
-      "sha256": "cba267fc722f3da961803aaf8761f150ba8c42811e60b730836a2abf689dbc5c"
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-primary-math.json",
+      "sizeBytes": 491109,
+      "sha256": "b1509f270f902f342184f1d6d997177818a3ff284b300f73805bf2e8d5ea26e2"
     },
     {
-      "id": "taxonomy-primary-politics",
-      "title": "政治题库（小学）",
+      "id": "taxonomy-primary-english",
+      "title": "英语题库（小学）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
       "stage": "primary",
-      "subject": "politics",
+      "subject": "english",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "count": 1100,
+      "tagged": true,
+      "source": "cn-math-taxonomy",
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-primary-english.json",
+      "sizeBytes": 495949,
+      "sha256": "0ff972d754eb93bf0700b159c0e99f2383cde554148b77f2bd4f6e46e2bd1404"
+    },
+    {
+      "id": "taxonomy-primary-chinese",
+      "title": "语文题库（小学）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "primary",
+      "subject": "chinese",
       "grades": [
         1,
         2,
@@ -233,17 +66,21 @@
         5,
         6
       ],
-      "count": 636,
+      "count": 1976,
       "tagged": true,
       "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-primary-politics.json",
-      "sizeBytes": 318755,
-      "sha256": "afb6e0721fb1f7852bc35a835e02e7a919bec1b8eb845a084b54e9e4b9eb7cd9"
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-primary-chinese.json",
+      "sizeBytes": 1114214,
+      "sha256": "338945bf4346b0060555e1162ec0dafddf1592e27c9b91d6d6b2425157de11ed"
     },
     {
       "id": "taxonomy-primary-science",
       "title": "科学题库（小学）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
       "stage": "primary",
       "subject": "science",
       "grades": [
@@ -257,128 +94,255 @@
       "count": 1040,
       "tagged": true,
       "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-primary-science.json",
-      "sizeBytes": 558712,
-      "sha256": "19134e7285cbe8e4a009ba16d33881dcfd498cdfc7ae915838fe595511bf1895"
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-primary-science.json",
+      "sizeBytes": 559756,
+      "sha256": "796282fb37eaf2ccadc0d0389e2e194721e07a920057d7a51e0c9f34b2be58ed"
     },
     {
-      "id": "gaokao-senior-high-biology",
-      "title": "高考生物真题（2010–2024）",
-      "stage": "senior_high",
-      "subject": "biology",
+      "id": "taxonomy-primary-politics",
+      "title": "政治题库（小学）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "primary",
+      "subject": "politics",
       "grades": [
-        12
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
       ],
-      "count": 288,
-      "tagged": false,
-      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
-      "license": "Apache-2.0（数据集）",
-      "file": "banks/gaokao-senior-high-biology.json",
-      "sizeBytes": 502011,
-      "sha256": "c89dc326afa3da9aafa258e7eb325bcc35b5fe2c13ca12c10d3c04bafea5adf1"
-    },
-    {
-      "id": "gaokao-senior-high-chemistry",
-      "title": "高考化学真题（2010–2024）",
-      "stage": "senior_high",
-      "subject": "chemistry",
-      "grades": [
-        12
-      ],
-      "count": 148,
-      "tagged": false,
-      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
-      "license": "Apache-2.0（数据集）",
-      "file": "banks/gaokao-senior-high-chemistry.json",
-      "sizeBytes": 293875,
-      "sha256": "c0b9c607e489ad9577034c6f0f0d69694aeeae35ac4c10f4106cc71f9d95065c"
-    },
-    {
-      "id": "gaokao-senior-high-chinese",
-      "title": "高考语文真题（2010–2024）",
-      "stage": "senior_high",
-      "subject": "chinese",
-      "grades": [
-        12
-      ],
-      "count": 277,
-      "tagged": false,
-      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
-      "license": "Apache-2.0（数据集）",
-      "file": "banks/gaokao-senior-high-chinese.json",
-      "sizeBytes": 1362425,
-      "sha256": "862c035c3a06e34aa613421c83d71b598da1a3e4e8e47578f47882b1e55ec1b9"
-    },
-    {
-      "id": "taxonomy-senior_high-english",
-      "title": "英语题库（高中）",
-      "stage": "senior_high",
-      "subject": "english",
-      "grades": [
-        10,
-        11,
-        12
-      ],
-      "count": 1036,
+      "count": 636,
       "tagged": true,
       "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-senior_high-english.json",
-      "sizeBytes": 555805,
-      "sha256": "842a38ea37714fc78ad12b2791618f1898ffde53d905b8dad4c0181b6fa26bf1"
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-primary-politics.json",
+      "sizeBytes": 319395,
+      "sha256": "7c0b08cc70a168dcc62c5dc44f9133e6c6d6d0ed887907c01b05616cd34c98ea"
     },
     {
-      "id": "gaokao-senior-high-english",
-      "title": "高考英语真题（2010–2024）",
-      "stage": "senior_high",
+      "id": "taxonomy-junior-high-math",
+      "title": "数学题库（初中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "junior_high",
+      "subject": "math",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "count": 1407,
+      "tagged": true,
+      "source": "cn-math-taxonomy",
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-junior-high-math.json",
+      "sizeBytes": 821754,
+      "sha256": "9dc7c4a711516fa47548d7766c2d8cfccacfcb40b8e0e84e0d2fc8d04556d719"
+    },
+    {
+      "id": "taxonomy-junior-high-english",
+      "title": "英语题库（初中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "junior_high",
       "subject": "english",
       "grades": [
-        12
+        7,
+        8,
+        9
       ],
-      "count": 376,
-      "tagged": false,
-      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
-      "license": "Apache-2.0（数据集）",
-      "file": "banks/gaokao-senior-high-english.json",
-      "sizeBytes": 1404000,
-      "sha256": "8df7c6a090a1181d4b1a3ab1dca9d7a074bb8b7d34667fd800976ed189a19b2e"
+      "count": 1028,
+      "tagged": true,
+      "source": "cn-math-taxonomy",
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-junior-high-english.json",
+      "sizeBytes": 507235,
+      "sha256": "98b242b02f5487808c85f046bc8a3a1125ccc9a76e6782d2b0edb20aa6fcd9e6"
     },
     {
-      "id": "gaokao-senior-high-geography",
-      "title": "高考地理真题（2010–2024）",
-      "stage": "senior_high",
-      "subject": "geography",
+      "id": "taxonomy-junior-high-chinese",
+      "title": "语文题库（初中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "junior_high",
+      "subject": "chinese",
       "grades": [
-        12
+        7,
+        8,
+        9
       ],
-      "count": 69,
-      "tagged": false,
-      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
-      "license": "Apache-2.0（数据集）",
-      "file": "banks/gaokao-senior-high-geography.json",
-      "sizeBytes": 139272,
-      "sha256": "ff9dfe5bd241b63e0899497ab9e604b2753839f6858ed83e6050d8b5d5212294"
+      "count": 756,
+      "tagged": true,
+      "source": "cn-math-taxonomy",
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-junior-high-chinese.json",
+      "sizeBytes": 463022,
+      "sha256": "266f55fab1aed5e2086d4cc2ffb973ac906f06f9838b32ca6b58397d87f66791"
     },
     {
-      "id": "gaokao-senior-high-history",
-      "title": "高考历史真题（2010–2024）",
-      "stage": "senior_high",
+      "id": "taxonomy-junior-high-physics",
+      "title": "物理题库（初中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "junior_high",
+      "subject": "physics",
+      "grades": [
+        8,
+        9
+      ],
+      "count": 368,
+      "tagged": true,
+      "source": "cn-math-taxonomy",
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-junior-high-physics.json",
+      "sizeBytes": 378610,
+      "sha256": "b16ececce8fdcebe7d6505d9baacfbc6199aa2fe4cb6af182a84540b691e2b69"
+    },
+    {
+      "id": "taxonomy-junior-high-chemistry",
+      "title": "化学题库（初中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "junior_high",
+      "subject": "chemistry",
+      "grades": [
+        9
+      ],
+      "count": 180,
+      "tagged": true,
+      "source": "cn-math-taxonomy",
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-junior-high-chemistry.json",
+      "sizeBytes": 250020,
+      "sha256": "95e09360caf8f123ab4d6dde625c8cca7cd3e5afc97aa6bb456654496ad2c1e5"
+    },
+    {
+      "id": "taxonomy-junior-high-biology",
+      "title": "生物题库（初中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "junior_high",
+      "subject": "biology",
+      "grades": [
+        7,
+        8
+      ],
+      "count": 264,
+      "tagged": true,
+      "source": "cn-math-taxonomy",
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-junior-high-biology.json",
+      "sizeBytes": 280827,
+      "sha256": "463968a1b1e894fdd4a961f715fe90e60750a51b26016b609f0c9de921049a43"
+    },
+    {
+      "id": "taxonomy-junior-high-history",
+      "title": "历史题库（初中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "junior_high",
       "subject": "history",
       "grades": [
-        12
+        7,
+        8,
+        9
       ],
-      "count": 472,
-      "tagged": false,
-      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
-      "license": "Apache-2.0（数据集）",
-      "file": "banks/gaokao-senior-high-history.json",
-      "sizeBytes": 848055,
-      "sha256": "53318cdacb57685f4ad1e6d76aa912bd4b06b4211bc4a790e6af3ef17142244d"
+      "count": 536,
+      "tagged": true,
+      "source": "cn-math-taxonomy",
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-junior-high-history.json",
+      "sizeBytes": 397148,
+      "sha256": "507fe2954a56611ed493355754b6d2dc12c25a798b3b97c85525b6bdf8e80512"
     },
     {
-      "id": "taxonomy-senior_high-math",
+      "id": "taxonomy-junior-high-geography",
+      "title": "地理题库（初中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "junior_high",
+      "subject": "geography",
+      "grades": [
+        7,
+        8
+      ],
+      "count": 236,
+      "tagged": true,
+      "source": "cn-math-taxonomy",
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-junior-high-geography.json",
+      "sizeBytes": 255611,
+      "sha256": "7a66dbbf6c2103e10edaae0c33dd6a117287f5fcd2ac554a1301bc4299e81dfb"
+    },
+    {
+      "id": "taxonomy-junior-high-politics",
+      "title": "政治题库（初中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "junior_high",
+      "subject": "politics",
+      "grades": [
+        7,
+        8
+      ],
+      "count": 340,
+      "tagged": true,
+      "source": "cn-math-taxonomy",
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-junior-high-politics.json",
+      "sizeBytes": 359636,
+      "sha256": "454b2c9dd8b6994008f810927ed86228bb80b3cec38cefc456602cdb4937b428"
+    },
+    {
+      "id": "gaokao-senior-high-math",
+      "title": "高考数学真题（2010–2024）",
+      "description": "历年高考真题汇编，含答案与解析；题目未标知识点，可按来源筛选。",
+      "collection": "gaokao",
+      "stage": "senior_high",
+      "subject": "math",
+      "grades": [
+        12
+      ],
+      "count": 936,
+      "tagged": false,
+      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
+      "sourceUrl": "https://github.com/rainewhk/gaokao",
+      "license": "Apache-2.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/gaokao/gaokao-senior-high-math.json",
+      "sizeBytes": 1213278,
+      "sha256": "f989d0c5a0ff2662534acfa65a9977aa8e2124025827eea1657675c37fae991f"
+    },
+    {
+      "id": "taxonomy-senior-high-math",
       "title": "数学题库（高中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
       "stage": "senior_high",
       "subject": "math",
       "grades": [
@@ -389,30 +353,100 @@
       "count": 1084,
       "tagged": true,
       "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-senior_high-math.json",
-      "sizeBytes": 553429,
-      "sha256": "38222d792ed2b03d583a95de79a1fc97103f52f5306cf1008ac9383ba7b16886"
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-senior-high-math.json",
+      "sizeBytes": 554517,
+      "sha256": "cdfa57ca625bd56a00f70fc27862acfb99ce58ef1d3a4329619bf8ba292af594"
     },
     {
-      "id": "gaokao-senior-high-math",
-      "title": "高考数学真题（2010–2024）",
+      "id": "gaokao-senior-high-english",
+      "title": "高考英语真题（2010–2024）",
+      "description": "历年高考真题汇编，含答案与解析；题目未标知识点，可按来源筛选。",
+      "collection": "gaokao",
       "stage": "senior_high",
-      "subject": "math",
+      "subject": "english",
       "grades": [
         12
       ],
-      "count": 936,
+      "count": 376,
       "tagged": false,
       "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
-      "license": "Apache-2.0（数据集）",
-      "file": "banks/gaokao-senior-high-math.json",
-      "sizeBytes": 1212335,
-      "sha256": "829bbda69c90586f3752136998e89a71a45199f2172d5c4d640d2f60a2fe1883"
+      "sourceUrl": "https://github.com/rainewhk/gaokao",
+      "license": "Apache-2.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/gaokao/gaokao-senior-high-english.json",
+      "sizeBytes": 1404365,
+      "sha256": "d768a15964945e3e6f4ac154d7b017e3c30fdf7d4107dba23505d13f3e7f2b9c"
     },
     {
-      "id": "taxonomy-senior_high-physics",
+      "id": "taxonomy-senior-high-english",
+      "title": "英语题库（高中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
+      "stage": "senior_high",
+      "subject": "english",
+      "grades": [
+        10,
+        11,
+        12
+      ],
+      "count": 1036,
+      "tagged": true,
+      "source": "cn-math-taxonomy",
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-senior-high-english.json",
+      "sizeBytes": 556845,
+      "sha256": "4cb5c54a6eb3abc4e2a1d5123785925f2cc34da4da68d047ddbcd0dd2ee5f710"
+    },
+    {
+      "id": "gaokao-senior-high-chinese",
+      "title": "高考语文真题（2010–2024）",
+      "description": "历年高考真题汇编，含答案与解析；题目未标知识点，可按来源筛选。",
+      "collection": "gaokao",
+      "stage": "senior_high",
+      "subject": "chinese",
+      "grades": [
+        12
+      ],
+      "count": 277,
+      "tagged": false,
+      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
+      "sourceUrl": "https://github.com/rainewhk/gaokao",
+      "license": "Apache-2.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/gaokao/gaokao-senior-high-chinese.json",
+      "sizeBytes": 1362691,
+      "sha256": "5e6caace568a30c882184bbdd7c81bc765162c08093957ff5c2f5f61075c6002"
+    },
+    {
+      "id": "gaokao-senior-high-physics",
+      "title": "高考物理真题（2010–2024）",
+      "description": "历年高考真题汇编，含答案与解析；题目未标知识点，可按来源筛选。",
+      "collection": "gaokao",
+      "stage": "senior_high",
+      "subject": "physics",
+      "grades": [
+        12
+      ],
+      "count": 127,
+      "tagged": false,
+      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
+      "sourceUrl": "https://github.com/rainewhk/gaokao",
+      "license": "Apache-2.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/gaokao/gaokao-senior-high-physics.json",
+      "sizeBytes": 194749,
+      "sha256": "aa4c85f44789620250b40e2cc8e1e0bd2e4a775ef63eca148954f019a48d0ab5"
+    },
+    {
+      "id": "taxonomy-senior-high-physics",
       "title": "物理题库（高中）",
+      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
+      "collection": "taxonomy",
       "stage": "senior_high",
       "subject": "physics",
       "grades": [
@@ -423,30 +457,98 @@
       "count": 708,
       "tagged": true,
       "source": "cn-math-taxonomy",
-      "license": "CC BY-NC 4.0",
-      "file": "banks/taxonomy-senior_high-physics.json",
-      "sizeBytes": 916187,
-      "sha256": "77d2967f0d2af48a4bce245e020ab8259f53767bb47aa1fea5b1fcbf8393ff12"
+      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/taxonomy/taxonomy-senior-high-physics.json",
+      "sizeBytes": 916899,
+      "sha256": "587c12f0a57ca74f70a947e8731b372060396e02aa970f3ae8253b79291796c0"
     },
     {
-      "id": "gaokao-senior-high-physics",
-      "title": "高考物理真题（2010–2024）",
+      "id": "gaokao-senior-high-chemistry",
+      "title": "高考化学真题（2010–2024）",
+      "description": "历年高考真题汇编，含答案与解析；题目未标知识点，可按来源筛选。",
+      "collection": "gaokao",
       "stage": "senior_high",
-      "subject": "physics",
+      "subject": "chemistry",
       "grades": [
         12
       ],
-      "count": 127,
+      "count": 148,
       "tagged": false,
       "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
-      "license": "Apache-2.0（数据集）",
-      "file": "banks/gaokao-senior-high-physics.json",
-      "sizeBytes": 194583,
-      "sha256": "26a595a24ce8761b5c1749be509ee982e62a006299fa2a8c6a6434bc0d3db5d2"
+      "sourceUrl": "https://github.com/rainewhk/gaokao",
+      "license": "Apache-2.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/gaokao/gaokao-senior-high-chemistry.json",
+      "sizeBytes": 294012,
+      "sha256": "db2b5ff55d66172601ba80d4d76d300d40505d7d39cfdfa5d087e9aebcbc1921"
+    },
+    {
+      "id": "gaokao-senior-high-biology",
+      "title": "高考生物真题（2010–2024）",
+      "description": "历年高考真题汇编，含答案与解析；题目未标知识点，可按来源筛选。",
+      "collection": "gaokao",
+      "stage": "senior_high",
+      "subject": "biology",
+      "grades": [
+        12
+      ],
+      "count": 288,
+      "tagged": false,
+      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
+      "sourceUrl": "https://github.com/rainewhk/gaokao",
+      "license": "Apache-2.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/gaokao/gaokao-senior-high-biology.json",
+      "sizeBytes": 502288,
+      "sha256": "65324ae58e08edb3f368641ebe9425f241a7b9bb5861036ef4da06809b198222"
+    },
+    {
+      "id": "gaokao-senior-high-history",
+      "title": "高考历史真题（2010–2024）",
+      "description": "历年高考真题汇编，含答案与解析；题目未标知识点，可按来源筛选。",
+      "collection": "gaokao",
+      "stage": "senior_high",
+      "subject": "history",
+      "grades": [
+        12
+      ],
+      "count": 472,
+      "tagged": false,
+      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
+      "sourceUrl": "https://github.com/rainewhk/gaokao",
+      "license": "Apache-2.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/gaokao/gaokao-senior-high-history.json",
+      "sizeBytes": 848516,
+      "sha256": "6e2e273336b3e16c071f918e7c706947252bedd8fc9209e1e74358f96d5b528c"
+    },
+    {
+      "id": "gaokao-senior-high-geography",
+      "title": "高考地理真题（2010–2024）",
+      "description": "历年高考真题汇编，含答案与解析；题目未标知识点，可按来源筛选。",
+      "collection": "gaokao",
+      "stage": "senior_high",
+      "subject": "geography",
+      "grades": [
+        12
+      ],
+      "count": 69,
+      "tagged": false,
+      "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
+      "sourceUrl": "https://github.com/rainewhk/gaokao",
+      "license": "Apache-2.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/gaokao/gaokao-senior-high-geography.json",
+      "sizeBytes": 139330,
+      "sha256": "37431b615283a76d27965f158c10fd25e5a4647e639e6b4418fac13e7d0b95e1"
     },
     {
       "id": "gaokao-senior-high-politics",
       "title": "高考政治真题（2010–2024）",
+      "description": "历年高考真题汇编，含答案与解析；题目未标知识点，可按来源筛选。",
+      "collection": "gaokao",
       "stage": "senior_high",
       "subject": "politics",
       "grades": [
@@ -455,10 +557,12 @@
       "count": 433,
       "tagged": false,
       "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
-      "license": "Apache-2.0（数据集）",
-      "file": "banks/gaokao-senior-high-politics.json",
-      "sizeBytes": 831766,
-      "sha256": "65293413417614d4cff5573871173c4de49a430082ccd4e7b4bf0abac056cc92"
+      "sourceUrl": "https://github.com/rainewhk/gaokao",
+      "license": "Apache-2.0",
+      "updatedAt": "2026-11-11",
+      "file": "banks/gaokao/gaokao-senior-high-politics.json",
+      "sizeBytes": 832188,
+      "sha256": "a82f45499b7fc766776f111b3c64714d92e10fbb18d4e066456f3d734d70d23d"
     }
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "id": "taxonomy",
+  "title": "中小学分科知识点题库",
+  "description": "按教材章节与知识点整理的小学、初中、高中练习题，全部带知识点标签。",
+  "origin": "third_party",
+  "source": "cn-math-taxonomy",
+  "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+  "license": "CC-BY-NC-4.0",
+  "obtainedAt": "2026-11-11",
+  "maintainers": [
+    "margrop"
+  ],
+  "notes": "取自上游 data/topics.json 与 data/questions.json。按题目 topicId 关联知识点 name、grade、semester、chapter；morality 学科记为 politics；高中 13–16 册次统一记为 grade 12。上游说明：知识图谱与题库仍需一线教师审核；商业使用需向原作者单独授权。"
+}

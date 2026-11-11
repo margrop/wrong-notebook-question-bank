@@ -1,0 +1,22 @@
+name: 题目纠错
+description: 题干、选项、答案或解析有误
+labels: ["题目纠错"]
+body:
+  - type: input
+    id: package
+    attributes:
+      label: 题库包
+      description: 包 id 或文件路径，如 taxonomy-primary-math
+    validations:
+      required: true
+  - type: input
+    id: question
+    attributes:
+      label: 题目 id
+      description: 题库包中该题的 id；不知道的话在下面贴出题干
+  - type: textarea
+    id: detail
+    attributes:
+      label: 哪里有误，应该是什么
+    validations:
+      required: true

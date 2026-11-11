@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 应用本身的问题
+    url: https://github.com/margrop/wrong-notebook/issues
+    about: 错题本应用的功能与缺陷请到 wrong-notebook 仓库反馈

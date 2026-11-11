@@ -1,0 +1,14 @@
+{
+  "id": "gaokao",
+  "title": "高考真题汇编（2010–2024）",
+  "description": "历年高考真题，含答案与解析；题目未标知识点。",
+  "origin": "third_party",
+  "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
+  "sourceUrl": "https://github.com/rainewhk/gaokao",
+  "license": "Apache-2.0",
+  "obtainedAt": "2026-11-11",
+  "maintainers": [
+    "margrop"
+  ],
+  "notes": "上游整合 GAOKAO-Bench（https://github.com/OpenLMLab/GAOKAO-Bench）与 GAOKAO-Bench-Updates。按目录学科、年份、卷别与题型拆分；答案数组转为逗号分隔文本；保留题干 LaTeX 与解析。上游说明：题目版权归原出题机构；不保证答案与解析完全准确；仅供研究学习。本仓库修正：3 道数学题中因反斜杠未转义而变成控制字符的 LaTeX 命令（\\frac、\\bar、\\right、\\times）已还原；30 道答案含多个选项的题目由单选题改标为多选题。"
+}

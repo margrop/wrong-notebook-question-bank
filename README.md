@@ -1,20 +1,68 @@
 # wrong-notebook-question-bank
 
-智能错题本（[margrop/wrong-notebook](https://github.com/margrop/wrong-notebook)）的共享题库下载仓库。
+智能错题本（[margrop/wrong-notebook](https://github.com/margrop/wrong-notebook)）的共享题库仓库。
 
-题库按学段、学科打包为 JSON。应用中的「真题库」页面可直接从本仓库下载并导入，导入的题目默认只进入真题库、不进入错题本；也可选择同时写入错题本。举一反三练习可按知识点从已导入的真题库中选题。
+题库按来源、学段、学科打包为 JSON。应用的「真题库」页可以直接从本仓库下载并导入；导入的题目默认只进入真题库，也可以选择同时写入错题本。举一反三练习会按知识点从已导入的题库中选题。
 
-## 下载与导入
+现有题库见 [`docs/CATALOG.md`](./docs/CATALOG.md)。
 
-1. 在应用「真题库」页选择「从共享题库下载」，读取 `index.json` 后按包导入。
-2. 或下载 `banks/<package-id>.json`，在「真题库」页上传导入。
-3. 单包上限 5000 题；包内题目共用 `meta.stage` / `meta.subject`，单题可覆盖。
+## 使用题库
 
-索引文件：[`index.json`](./index.json)。每个包记录 `file`、`sizeBytes`、`sha256`，应用可按校验值确认文件完整性。
+- **在应用里下载**：打开「真题库」页，选择「从共享题库下载」，按包导入。
+- **手动下载**：从 [`docs/CATALOG.md`](./docs/CATALOG.md) 找到题库包，下载对应的 `banks/<来源集>/<包 id>.json`，在「真题库」页上传导入。
+
+题目、答案与解析由各来源整理，不保证完全准确，用于教学前请核对。发现错误可以开「题目纠错」Issue 或直接提 PR。
+
+## 把自己的题库转成题库包
+
+手里有 Excel、Word、PDF 或其他格式的题库，可以转换成题库包后导入自己的错题本，不必共享。
+
+**用 AI 编程助手**（推荐）：克隆本仓库，在仓库目录中打开 Claude Code、Codex、Cursor 等助手，告诉它：
+
+> 把 ~/Documents/初二物理题库.docx 转成错题本题库
+
+助手会按仓库自带的技能 [`convert-question-bank`](./.claude/skills/convert-question-bank/SKILL.md) 完成抽取、打包、校验和抽查，并询问你是只自己用还是愿意共享。愿意共享时，它会接着准备 PR。
+
+**手工转换**：把题目整理成 CSV、JSONL 或 JSON 数组（字段见 [`docs/FORMAT.md`](./docs/FORMAT.md#题目)），然后：
+
+```bash
+python3 scripts/qbank.py pack 题目.csv --out 我的题库.json --id my-bank \
+  --title "我的初中数学题库" --stage junior_high --subject math \
+  --source "自己整理" --license "仅供个人使用"
+```
+
+工具只需要 Python 3.9 及以上，没有第三方依赖。
+
+## 共享题库
+
+欢迎把自编的题目或开放许可的数据集贡献到本仓库，要求和步骤见 [`CONTRIBUTING.md`](./CONTRIBUTING.md)。要点：
+
+- 只收录有权公开再分发的内容，许可须在[允许范围](./docs/FORMAT.md#许可)内。教辅书、试卷扫描件和商业题库网站的题目不收录。
+- PR 必须通过自动校验：数据结构、字段取值、控制字符与乱码、选择题答案与选项是否对应、脚本与内嵌数据、包大小、许可与目录布局等。
+- 贡献者需要对照原始资料抽查，并在 PR 中说明剩余的警告。
+
+## 仓库结构
+
+```
+banks/
+  <来源集>/               同一出处、同一许可的一组题库包
+    collection.json       来源、许可、维护者、转换说明
+    <包 id>.json          题库包：一个学段、一个学科，最多 5000 题
+index.json                应用读取的索引（生成）
+docs/
+  CATALOG.md              题库目录（生成）
+  FORMAT.md               数据格式与校验规则
+schema/                   JSON Schema
+scripts/qbank.py          打包、规范化、校验、生成索引
+tests/                    工具测试
+.claude/skills/           题库转换技能
+```
+
+题库按来源集分目录：每次贡献只动自己的目录，来源与许可随数据存放，需要下架时可以整目录移除。按学段、学科浏览用 `docs/CATALOG.md` 或 `index.json`，两者都由 `banks/` 生成。
 
 ## 数据格式
 
-题库文件为 `wrong-notebook-question-bank` v1：
+题库包是 `wrong-notebook-question-bank` v1：
 
 ```json
 {
@@ -30,82 +78,37 @@
     "tagged": true,
     "source": "cn-math-taxonomy",
     "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
-    "license": "CC BY-NC 4.0",
+    "license": "CC-BY-NC-4.0",
     "updatedAt": "2026-11-11"
   },
   "questions": [
     {
       "id": "cnm_p001_q1",
-      "stage": "primary",
-      "subjectKey": "math",
       "grade": 1,
       "semester": "上",
       "questionType": "fill_blank",
       "difficultyStars": 2,
       "text": "3 的后面一个数是几？",
-      "options": null,
       "answer": "4",
       "analysis": "从 1 往后数，3 的后面是 4。",
       "knowledgePoints": ["1到5各数的认识"],
-      "source": "一年级上册 第1单元 5以内数的认识和加、减法",
-      "figureSvg": null
+      "source": "一年级上册 第1单元 5以内数的认识和加、减法"
     }
   ]
 }
 ```
 
-字段说明：
-
-| 字段 | 说明 |
-|---|---|
-| `stage` | `primary` / `junior_high` / `senior_high` / `university` |
-| `subject` / `subjectKey` | `math` / `english` / `chinese` / `science` / `physics` / `chemistry` / `biology` / `history` / `geography` / `politics` |
-| `grade` | 1–6 小学，7–9 初中，10–12 高中；高中选必册次统一记为 12 |
-| `semester` | `上` / `下`；高中真题可空 |
-| `questionType` | 应用标准题型：`single_choice`、`multiple_choice`、`true_false`、`fill_blank`、`calculation`、`solution`、`reading`、`cloze`、`writing`、`other` |
-| `difficultyStars` | 1–5，可空 |
-| `options` | 选择题选项对象 `{"A":"…","B":"…"}`，可空 |
-| `knowledgePoints` | 知识点名称数组；应用按名称与错题的知识点标签匹配选题 |
-| `figureSvg` | 题目配图 SVG，可空 |
-
-索引为 `wrong-notebook-question-bank-index` v1，`packages` 数组字段与 `meta` 一致，另含 `file` / `sizeBytes` / `sha256`。JSON Schema 见 [`schema/question-bank.schema.json`](./schema/question-bank.schema.json)。
-
-## 现有题库包
-
-| 包 | 学段 | 学科 | 题数 | 知识点 |
-|---|---|---:|---:|---|
-| `taxonomy-primary-math` | 小学 | 数学 | 1136 | 有 |
-| `taxonomy-primary-english` | 小学 | 英语 | 1100 | 有 |
-| `taxonomy-primary-chinese` | 小学 | 语文 | 1976 | 有 |
-| `taxonomy-primary-science` | 小学 | 科学 | 1040 | 有 |
-| `taxonomy-primary-politics` | 小学 | 道法/政治 | 636 | 有 |
-| `taxonomy-junior_high-*` | 初中 | 数学、英语、语文、物理、化学、生物、历史、地理、政治 | 5115 | 有 |
-| `taxonomy-senior_high-*` | 高中 | 数学、英语、物理 | 2828 | 有 |
-| `gaokao-senior-high-*` | 高中 | 数学、语文、英语、物理、化学、生物、历史、地理、政治 | 3126 | 无 |
-
-完整清单与题数见 `index.json`。当前共 26 个包、16957 道题。
-
-## 来源与许可
-
-- `taxonomy-*`：来自 [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy)，按该仓库 `data/topics.json` 的 `topicId` 补知识点名称，许可 **CC BY-NC 4.0**（非商业使用；商业使用需向原作者单独授权）。
-- `gaokao-*`：来自 [rainewhk/gaokao](https://github.com/rainewhk/gaokao)，该仓库整合 [GAOKAO-Bench](https://github.com/OpenLMLab/GAOKAO-Bench) 与 GAOKAO-Bench-Updates，许可 **Apache-2.0**；题目版权归原出题机构。
-- 本仓库的打包脚本与索引结构采用 MIT 许可，题库数据沿用各来源许可。详见 [`NOTICE.md`](./NOTICE.md)。
-
-题目、答案与解析由上游项目整理，**不保证**完全准确；用于教学前请核对。上游明确说明其知识图谱与题库仍需一线教师审核。
+字段说明、来源集与索引的格式、全部校验规则见 [`docs/FORMAT.md`](./docs/FORMAT.md)。
 
 ## 校验
 
 ```bash
-python3 scripts/validate.py
+python3 scripts/qbank.py validate          # 校验整个仓库
+python3 -m unittest discover -s tests      # 工具测试
 ```
 
-校验索引、包内 `count`、`sha256`、必填字段与题型取值。
+## 许可
 
-## 贡献
-
-新增题库包时：
-
-1. 按 v1 格式生成 `banks/<id>.json`，`meta.count` 与 `questions` 长度一致。
-2. 更新 `index.json` 的 `sizeBytes` 与 `sha256`。
-3. 在 `NOTICE.md` 记录来源、许可与获取日期。
-4. 运行 `python3 scripts/validate.py`。
+- 工具、Schema 与文档：MIT，见 [`LICENSE`](./LICENSE)。
+- 题库数据：沿用各来源的许可，写在每个来源集的 `collection.json` 中，汇总见 [`docs/CATALOG.md`](./docs/CATALOG.md) 与 [`NOTICE.md`](./NOTICE.md)。部分题库为非商业许可（如 CC-BY-NC-4.0），商业使用前请确认。
+- 权利人认为内容不应出现在本仓库的，请开「版权与下架」Issue。

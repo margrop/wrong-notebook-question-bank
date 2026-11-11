@@ -141,6 +141,7 @@ python3 scripts/qbank.py validate 某个包.json  # 单个文件
 | `duplicate-id` / `id-format` | 包内题目 id 重复，或首尾有空白 | 改 id |
 | `knowledge-point` | 知识点为空、重复、过长或首尾有空白 | 清理 |
 | `options` | 只有一个选项 | 多为选项拆分出错 |
+| `duplicate-ratio` | 包内重复题超过 20%（不足 20 题的包不检查）。同一批题被套用到多个知识点时会这样 | 去重，并核对每道题与知识点是否相符 |
 | `answer-not-in-options` | 选择题答案的字母不在选项里 | 核对原题 |
 | `control-char` | 含控制字符或替换字符 `U+FFFD`。常见原因是 LaTeX 反斜杠没转义：`\frac` 变成换页符、`\bar` 变成退格符、`\right` 变成回车 | 修正转换脚本，从原始资料重新生成 |
 | `active-content` | 含 `<script>`、`<iframe>`、`javascript:` 等 | 删除 |
@@ -155,7 +156,7 @@ python3 scripts/qbank.py validate 某个包.json  # 单个文件
 | `choice-no-options` | 选择题没有单列 `options`，选项还在题干里 |
 | `single-choice-multi-answer` | 单选题的答案有多个字母，题型可能应为多选 |
 | `option-keys` | 选项键不是单个大写字母 |
-| `duplicate-question` | 包内有题干、材料、选项完全相同的题 |
+| `duplicate-question` | 包内有题干、材料、选项相同的题（忽略选项顺序） |
 | `grade-out-of-stage` | 年级不在学段范围内 |
 | `text-too-short` | 题干不足 2 个字 |
 | `latex-unbalanced` | `$` 数量为奇数，公式可能没闭合（货币符号会误报） |

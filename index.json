@@ -102,31 +102,6 @@
       "sha256": "796282fb37eaf2ccadc0d0389e2e194721e07a920057d7a51e0c9f34b2be58ed"
     },
     {
-      "id": "taxonomy-primary-politics",
-      "title": "政治题库（小学）",
-      "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
-      "collection": "taxonomy",
-      "stage": "primary",
-      "subject": "politics",
-      "grades": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "count": 636,
-      "tagged": true,
-      "source": "cn-math-taxonomy",
-      "sourceUrl": "https://github.com/xiaoyang111222/cn-math-taxonomy",
-      "license": "CC-BY-NC-4.0",
-      "updatedAt": "2026-11-11",
-      "file": "banks/taxonomy/taxonomy-primary-politics.json",
-      "sizeBytes": 319395,
-      "sha256": "7c0b08cc70a168dcc62c5dc44f9133e6c6d6d0ed887907c01b05616cd34c98ea"
-    },
-    {
       "id": "taxonomy-junior-high-math",
       "title": "数学题库（初中）",
       "description": "按人教版课标知识点组织的分年级题库，题目带知识点标签。",
@@ -328,15 +303,15 @@
       "grades": [
         12
       ],
-      "count": 936,
+      "count": 907,
       "tagged": false,
       "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
       "sourceUrl": "https://github.com/rainewhk/gaokao",
       "license": "Apache-2.0",
       "updatedAt": "2026-11-11",
       "file": "banks/gaokao/gaokao-senior-high-math.json",
-      "sizeBytes": 1213278,
-      "sha256": "f989d0c5a0ff2662534acfa65a9977aa8e2124025827eea1657675c37fae991f"
+      "sizeBytes": 1169339,
+      "sha256": "2a41eeb755f882f8487750f02318069401081f91d83908979d5681ab10a28721"
     },
     {
       "id": "taxonomy-senior-high-math",
@@ -412,15 +387,15 @@
       "grades": [
         12
       ],
-      "count": 277,
+      "count": 270,
       "tagged": false,
       "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
       "sourceUrl": "https://github.com/rainewhk/gaokao",
       "license": "Apache-2.0",
       "updatedAt": "2026-11-11",
       "file": "banks/gaokao/gaokao-senior-high-chinese.json",
-      "sizeBytes": 1362691,
-      "sha256": "5e6caace568a30c882184bbdd7c81bc765162c08093957ff5c2f5f61075c6002"
+      "sizeBytes": 1317516,
+      "sha256": "294016eebbdfb6d01ae10364b64eba1808a4b55af124db5caf1c60d957605b35"
     },
     {
       "id": "gaokao-senior-high-physics",
@@ -474,15 +449,15 @@
       "grades": [
         12
       ],
-      "count": 148,
+      "count": 143,
       "tagged": false,
       "source": "rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）",
       "sourceUrl": "https://github.com/rainewhk/gaokao",
       "license": "Apache-2.0",
       "updatedAt": "2026-11-11",
       "file": "banks/gaokao/gaokao-senior-high-chemistry.json",
-      "sizeBytes": 294012,
-      "sha256": "db2b5ff55d66172601ba80d4d76d300d40505d7d39cfdfa5d087e9aebcbc1921"
+      "sizeBytes": 285502,
+      "sha256": "1c5653bbbd7182fb53186eb3c2d386291c5eb4e6ba5f8374f89b6dbba6dea2d6"
     },
     {
       "id": "gaokao-senior-high-biology",

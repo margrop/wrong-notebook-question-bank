@@ -10,5 +10,5 @@
   "maintainers": [
     "margrop"
   ],
-  "notes": "取自上游 data/topics.json 与 data/questions.json。按题目 topicId 关联知识点 name、grade、semester、chapter；morality 学科记为 politics；高中 13–16 册次统一记为 grade 12。上游说明：知识图谱与题库仍需一线教师审核；商业使用需向原作者单独授权。"
+  "notes": "取自上游 data/topics.json 与 data/questions.json。按题目 topicId 关联知识点 name、grade、semester、chapter；morality 学科记为 politics；高中 13–16 册次统一记为 grade 12。上游说明：知识图谱与题库仍需一线教师审核；商业使用需向原作者单独授权。未收录上游的小学道德与法治（cnd_p*，636 题）：其中只有 189 道内容不同，同一批模板题被套用到多个知识点，题目与知识点大多不符。"
 }

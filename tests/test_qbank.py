@@ -113,8 +113,19 @@ class ValidateTest(RepoCase):
         other = dict(copy.deepcopy(QUESTION), id="q2")
         self.write([copy.deepcopy(QUESTION), other], count=2)
         self.assertIn("duplicate-question", self.codes("warning"))
+        shuffled = dict(copy.deepcopy(QUESTION), id="q3", options={"A": "2", "B": "1"}, answer="A")
+        self.write([copy.deepcopy(QUESTION), shuffled], count=2)
+        self.assertIn("duplicate-question", self.codes("warning"))
         self.write([copy.deepcopy(QUESTION), copy.deepcopy(QUESTION)], count=2)
         self.assertIn("duplicate-id", self.codes())
+
+    def test_duplicate_ratio(self):
+        def questions(distinct):
+            return [dict(copy.deepcopy(QUESTION), id=f"q{i}", text=f"{i % distinct} + 1 = ?") for i in range(20)]
+        self.write(questions(distinct=10), count=20)
+        self.assertIn("duplicate-ratio", self.codes())
+        self.write(questions(distinct=18), count=20)
+        self.assertNotIn("duplicate-ratio", self.codes())
 
     def test_meta_errors(self):
         self.write(count=2)

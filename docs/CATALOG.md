@@ -2,19 +2,21 @@
 
 > 本文件由 `python3 scripts/qbank.py build` 生成，请勿手工修改。
 
-共 2 个来源集、25 个题库包、16280 道题。
+共 3 个来源集、26 个题库包、16408 道题。
 
 ## 来源集
 
 | 来源集 | 名称 | 来源 | 许可 | 包数 | 题数 | 维护者 |
 |---|---|---|---|---:|---:|---|
+| [`ai-math-thinking`](../banks/ai-math-thinking/collection.json) | AI新编数学思维训练 | margrop 的 AI辅助独立新编题目 | CC-BY-NC-4.0 | 1 | 128 | [@margrop](https://github.com/margrop) |
 | [`gaokao`](../banks/gaokao/collection.json) | 高考真题汇编（2010–2024） | [rainewhk/gaokao（整合 GAOKAO-Bench / GAOKAO-Bench-Updates）](https://github.com/rainewhk/gaokao) | Apache-2.0 | 9 | 3085 | [@margrop](https://github.com/margrop) |
 | [`taxonomy`](../banks/taxonomy/collection.json) | 中小学分科知识点题库 | [cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | CC-BY-NC-4.0 | 16 | 13195 | [@margrop](https://github.com/margrop) |
 
-## 小学（5252 题）
+## 小学（5380 题）
 
 | 学科 | 题库包 | 名称 | 题数 | 年级 | 知识点 | 许可 | 大小 |
 |---|---|---|---:|---|---|---|---:|
+| 数学 | [`ai-math-thinking-primary-math-number-theory`](../banks/ai-math-thinking/ai-math-thinking-primary-math-number-theory.json) | AI新编小学数论（五至六年级） | 128 | 5–6 | 有 | CC-BY-NC-4.0 | 200 KB |
 | 数学 | [`taxonomy-primary-math`](../banks/taxonomy/taxonomy-primary-math.json) | 数学题库（小学） | 1136 | 1–6 | 有 | CC-BY-NC-4.0 | 480 KB |
 | 英语 | [`taxonomy-primary-english`](../banks/taxonomy/taxonomy-primary-english.json) | 英语题库（小学） | 1100 | 3–6 | 有 | CC-BY-NC-4.0 | 484 KB |
 | 语文 | [`taxonomy-primary-chinese`](../banks/taxonomy/taxonomy-primary-chinese.json) | 语文题库（小学） | 1976 | 1–6 | 有 | CC-BY-NC-4.0 | 1088 KB |

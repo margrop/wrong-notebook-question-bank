@@ -1,8 +1,28 @@
 {
   "format": "wrong-notebook-question-bank-index",
   "version": 1,
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-13",
   "packages": [
+    {
+      "id": "ai-math-thinking-primary-math-number-theory",
+      "title": "AI新编小学数论（五至六年级）",
+      "description": "涵盖整除、质数与合数、约数与倍数、余数、进位制与取整及数论综合。含答案、解析和知识点，适合五至六年级数学思维专项练习。",
+      "collection": "ai-math-thinking",
+      "stage": "primary",
+      "subject": "math",
+      "grades": [
+        5,
+        6
+      ],
+      "count": 128,
+      "tagged": true,
+      "source": "margrop 的 AI辅助独立新编题目",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-13",
+      "file": "banks/ai-math-thinking/ai-math-thinking-primary-math-number-theory.json",
+      "sizeBytes": 204879,
+      "sha256": "0acd6ab8430a9af846b8ed7ae4baa38c6c105189f702b3be2e0ff1a951c91279"
+    },
     {
       "id": "taxonomy-primary-math",
       "title": "数学题库（小学）",

@@ -25,6 +25,27 @@
       "sha256": "c6a310d5b1d50f4ced7ff4f42f8ea1ff717eb8dd88a26ecec43c08c1c543efa4"
     },
     {
+      "id": "ai-math-thinking-primary-math-counting",
+      "title": "AI新编小学计数（三至六年级）",
+      "collection": "ai-math-thinking",
+      "stage": "primary",
+      "subject": "math",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "count": 257,
+      "tagged": true,
+      "source": "margrop 的 AI辅助独立新编题目",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-15",
+      "file": "banks/ai-math-thinking/ai-math-thinking-primary-math-counting.json",
+      "sizeBytes": 387004,
+      "sha256": "858fbd641ccce5dbc0d2d49471d03acf8021a8683265e6ff930664678e141bb9"
+    },
+    {
       "id": "ai-math-thinking-primary-math-number-theory",
       "title": "AI新编小学数论（五至六年级）",
       "description": "涵盖整除、质数与合数、约数与倍数、余数、进位制与取整及数论综合。含答案、解析和知识点，适合五至六年级数学思维专项练习。",

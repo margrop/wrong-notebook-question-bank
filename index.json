@@ -1,8 +1,29 @@
 {
   "format": "wrong-notebook-question-bank-index",
   "version": 1,
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-15",
   "packages": [
+    {
+      "id": "ai-math-thinking-primary-math-calculation",
+      "title": "AI新编小学计算（三至六年级）",
+      "collection": "ai-math-thinking",
+      "stage": "primary",
+      "subject": "math",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "count": 294,
+      "tagged": true,
+      "source": "margrop 的 AI辅助独立新编题目",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-15",
+      "file": "banks/ai-math-thinking/ai-math-thinking-primary-math-calculation.json",
+      "sizeBytes": 358537,
+      "sha256": "c6a310d5b1d50f4ced7ff4f42f8ea1ff717eb8dd88a26ecec43c08c1c543efa4"
+    },
     {
       "id": "ai-math-thinking-primary-math-number-theory",
       "title": "AI新编小学数论（五至六年级）",

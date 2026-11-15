@@ -1,7 +1,7 @@
 {
   "format": "wrong-notebook-question-bank-index",
   "version": 1,
-  "updatedAt": "2026-11-15",
+  "updatedAt": "2026-11-16",
   "packages": [
     {
       "id": "ai-math-thinking-primary-math-calculation",
@@ -23,6 +23,27 @@
       "file": "banks/ai-math-thinking/ai-math-thinking-primary-math-calculation.json",
       "sizeBytes": 358537,
       "sha256": "c6a310d5b1d50f4ced7ff4f42f8ea1ff717eb8dd88a26ecec43c08c1c543efa4"
+    },
+    {
+      "id": "ai-math-thinking-primary-math-combinatorics",
+      "title": "AI新编小学组合（三至六年级）",
+      "collection": "ai-math-thinking",
+      "stage": "primary",
+      "subject": "math",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "count": 188,
+      "tagged": true,
+      "source": "margrop 的 AI辅助独立新编题目",
+      "license": "CC-BY-NC-4.0",
+      "updatedAt": "2026-11-16",
+      "file": "banks/ai-math-thinking/ai-math-thinking-primary-math-combinatorics.json",
+      "sizeBytes": 331308,
+      "sha256": "83dbf633538b1cb609550e527c700db1c78526ec9911c6c86d42b3eb08a2c2fa"
     },
     {
       "id": "ai-math-thinking-primary-math-counting",
